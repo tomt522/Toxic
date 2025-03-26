@@ -10,13 +10,13 @@ module.exports = {
   },
   onStart: async ({ args, message, api, event }) => {
     const prompt = args.join(" ");
-    let b = global.GoatBot.config.cookie.bing;
+    let b = "1cuJ6q4TRFe7Egf6fIrFrNgv9tFg5Y9acTNNUBT5xF5Wjc8zd9Gk_AE4eayxHM0IJxWLs0ps-SLhC3INkQGXGTn_W_soDBo75SCm2T43C8NzMXoioD11gf3S1ozmnWBq60DfoqqETjfwhptmCIUqIphRM0BrcQ-Bg1ZTq2Mm-nbejkrgvImWVQjSk5GJi79AiOSIfMGdEFZIIEP15psg7FB2z6abGQkGynsNrh-3DuFM";
 
     try {
       const loadingMsg = await message.reply("⏳ Generating image, please wait...");
       const apis = global.GoatBot.config.api.api;
       const axiosRequest = await axios.get(
-        `${apis}/bing?prompt=${prompt}&cookie=${b}`
+        `https://rest-nyx-apis.onrender.com/api/bing?prompt=${prompt}&cookie=${b}`
       );
       const images = axiosRequest.data.images.map(img => img.url);
 
