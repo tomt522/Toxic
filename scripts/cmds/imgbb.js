@@ -29,7 +29,7 @@ module.exports = {
        
 
     try {
-      const hasan = global.GoatBot.config.api.hasan;
+      const hasan = "https://hasan-all-apis.onrender.com";
       const response = await axios.get(`${hasan}/imgbb?imageUrl=${encodeURIComponent(URL)}`);
       const imageLink = response.data.imageUrl;
       return api.sendMessage(imageLink, event.threadID, event.messageID);
