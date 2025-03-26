@@ -20,7 +20,7 @@ module.exports = {
         let category = input === "en" ? "english" : type;
 
         try {
-            const hasan = global.GoatBot.config.api.hasan;
+            const hasan = "https://hasan-all-apis.onrender.com";
             const response = await axios.get(`${hasan}/quiz?category=${input}`);
             const quizData = response.data;
             const { question, correctAnswer, options } = quizData;
@@ -80,7 +80,7 @@ module.exports = {
 
 
                 try {
-                 const chack = global.GoatBot.config.api.hasan;
+                 const chack = "https://hasan-all-apis.onrender.com";
                  const no = Reply.dataGame.id
                     const checkResponse = await axios.get(`${chack}/quiz/check?id=${no}&answer=${userReply}`);
 
