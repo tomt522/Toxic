@@ -72,7 +72,7 @@ module.exports = {
 
   onStart: async function ({ api, args, event,threadsData }) {
     try {
-        const hasan = global.GoatBot.config.api.hasan;
+        const hasan = "https://hasan-all-apis.onrender.com";
       if (!args[0]) {
         const response = await axios.get(`${hasan}/flag`);
         const { flag, country } = response.data;
