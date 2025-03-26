@@ -20,7 +20,7 @@ module.exports = {
         }
 
         try {
-            const toxiciter = global.GoatBot.config.api.api;
+            const toxiciter = "https://rest-nyx-apis.onrender.com/api";
             const response = await axios.get(`${toxiciter}/prompt?url=${encodeURIComponent(h)}`);
             
             if (!response.data) {
