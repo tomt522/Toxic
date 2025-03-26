@@ -50,7 +50,7 @@ module.exports.onStart = async function ({ api, event, args, usersData }) {
           api.unsendMessage(info.messageID);
         }, 4000),
     );
-    const hasan = global.GoatBot.config.api.apis;
+    const hasan = "https://www.noobs-api.rf.gd/dipto";
     const img = `${hasan}/cover/${v}?name=${encodeURIComponent(name)}&subname=${encodeURIComponent(subname)}&number=${encodeURIComponent(phone)}&address=${encodeURIComponent(address)}&email=${encodeURIComponent(email)}&colour=${encodeURIComponent(color)}&uid=${id}`;
 
     try {
