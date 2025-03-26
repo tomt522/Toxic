@@ -27,7 +27,7 @@ module.exports = {
 
         try {
 
-    const toxiciter = global.GoatBot.config.api.api;
+    const toxiciter = "https://rest-nyx-apis.onrender.com/api";
             const res = await axios.get(`${toxiciter}/imgur?url=${encodeURIComponent(link2)}`);
             const link = res.data.data;
             return api.sendMessage(`\n\n${link}`, event.threadID, event.messageID);
