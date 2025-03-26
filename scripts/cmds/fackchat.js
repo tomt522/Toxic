@@ -39,7 +39,7 @@ module.exports = {
 
       const avatar = await usersData.getAvatarUrl(uid);
       
-      const hasan = global.GoatBot.config.api.hasan;
+      const hasan = "https://hasan-all-apis.onrender.com";
 
       const imgurl = await axios.get(`${hasan}/imgbb?imageUrl=${encodeURIComponent(avatar)}`);
 
