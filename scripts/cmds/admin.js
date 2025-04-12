@@ -12,7 +12,7 @@ module.exports = {
         shortDescription: {
 			en: "Add, remove or see the admin list for this bot"
 		},
-		   longDescription: {
+        longDescription: {
 			en: "Add, remove or see the admin list for this bot"
 		},
         category: "admin",
@@ -52,7 +52,7 @@ module.exports = {
         switch (args[0]) {
             case "list":
             case "-l": {
-                // ✅ **admin list সবাই দেখতে পারবে**
+                
                 if (config.adminBot.length === 0) {
                     return message.reply(getLang("noAdmin"));
                 }
@@ -64,7 +64,7 @@ module.exports = {
             case "-a":
             case "remove":
             case "-r": {
-                // ✅ **add & remove শুধুমাত্র অ্যাডমিনরা চালাতে পারবে**
+                
                 if (!config.adminBot.includes(senderID)) {
                     return message.reply(getLang("notAllowed"));
                 }
@@ -73,7 +73,7 @@ module.exports = {
             if (args[0] === "add" || args[0] === "-a") {
                 let uids = [];
 
-                // ✅ Check for mentioned users, replied message, or direct IDs
+               
                 if (Object.keys(event.mentions).length > 0) {
                     uids = Object.keys(event.mentions);
                 } else if (event.type === "message_reply") {
@@ -114,7 +114,7 @@ module.exports = {
             if (args[0] === "remove" || args[0] === "-r") {
                 let uids = [];
 
-                // ✅ Check for mentioned users, replied message, or direct IDs
+               
                 if (Object.keys(event.mentions).length > 0) {
                     uids = Object.keys(event.mentions);
                 } else if (event.type === "message_reply") {
