@@ -39,7 +39,7 @@ module.exports = {
 
       const avatar = await usersData.getAvatarUrl(uid);
       
-      const hasan = "https://www.noobx-api.rf.gd/api";
+      const hasan = global.GoatBot.config.api;
 
       const imgurl = await axios.get(`${hasan}/imgbb?imageUrl=${encodeURIComponent(avatar)}`);
 
